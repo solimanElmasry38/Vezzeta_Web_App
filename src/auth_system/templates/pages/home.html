@@ -1,0 +1,191 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="grad"></div>
+
+
+<h1>{{check}}</h1>
+  <section id="view" data-highlight="false">
+    
+    
+    {% for card in cards %}
+    <div class="card">
+      <div class="top">
+        <a class="name">{{card.user.first_name}} {{card.user.last_name}}</a>
+      </div>
+      <div class="bottom">
+        <span class="left">
+          <img src="{{card.img}}" alt="" class="DocImg" />
+        </span>
+        <span class="mid">
+          <ul data-highlight="false">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              
+              <p>{{card.address}}</p>
+            </li>
+            <li>
+              <i class="fa-solid fa-tag"></i>
+
+              <p>{{card.price}} $</p>
+              
+            </li>
+            <li>
+              <i class="fa-solid fa-pause"></i>
+
+              <p>{{card.weatingHours}}</p>
+              
+            </li>
+            <li>
+              <i class="fa-solid fa-briefcase"></i>
+              
+              <p>{{card.workingHours}}</p>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+
+              <p>{{card.phone}}</p>
+              
+            </li>
+          </ul>
+        </span>
+        <span class="right">
+          <a href="" class="book">book now</a>
+        </span>
+      </div>
+    </div>
+      
+    {% endfor %}
+      
+
+    
+    
+  </section>
+  <section id="testmon">
+    <div class="tcard">
+      <div class="top">
+        <img src="{% static 'img/doc.jpg' %}" alt="" />
+      </div>
+      <div class="mid">
+        <p class="name">soliman elmasr</p>
+        <p class="jop">develeper</p>
+      </div>
+      <div class="bottom">
+        <a href="">book now</a>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="top">
+        <img src="{% static 'img/doc.jpg' %}" alt="" />
+      </div>
+      <div class="mid">
+        <p class="name">soliman elmasr</p>
+        <p class="jop">develeper</p>
+      </div>
+      <div class="bottom">
+        <a href="">book now</a>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="top">
+        <img src="{% static 'img/doc.jpg' %}" alt="" />
+      </div>
+      <div class="mid">
+        <p class="name">soliman elmasr</p>
+        <p class="jop">develeper</p>
+      </div>
+      <div class="bottom">
+        <a href="">book now</a>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="top">
+        <img src="{% static 'img/doc.jpg' %}" alt="" />
+      </div>
+      <div class="mid">
+        <p class="name">soliman elmasr</p>
+        <p class="jop">develeper</p>
+      </div>
+      <div class="bottom">
+        <a href="">book now</a>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="top">
+        <img src="{% static 'img/doc.jpg' %}" alt="" />
+      </div>
+      <div class="mid">
+        <p class="name">soliman elmasr</p>
+        <p class="jop">develeper</p>
+      </div>
+      <div class="bottom">
+        <a href="">book now</a>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="top">
+        <img src="{% static 'img/doc.jpg' %}" alt="" />
+      </div>
+      <div class="mid">
+        <p class="name">soliman elmasr</p>
+        <p class="jop">develeper</p>
+      </div>
+      <div class="bottom">
+        <a href="">book now</a>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="top">
+        <img src="{% static 'img/doc.jpg' %}" alt="" />
+      </div>
+      <div class="mid">
+        <p class="name">soliman elmasr</p>
+        <p class="jop">develeper</p>
+      </div>
+      <div class="bottom">
+        <a href="">book now</a>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="top">
+        <img src="{% static 'img/doc.jpg' %}" alt="" />
+      </div>
+      <div class="mid">
+        <p class="name">soliman elmasr</p>
+        <p class="jop">develeper</p>
+      </div>
+      <div class="bottom">
+        <a href="">book now</a>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="top">
+        <img src="{% static 'img/doc.jpg' %}" alt="" />
+      </div>
+      <div class="mid">
+        <p class="name">soliman elmasr</p>
+        <p class="jop">develeper</p>
+      </div>
+      <div class="bottom">
+        <a href="">book now</a>
+      </div>
+    </div>
+    <div class="tcard">
+      <div class="top">
+        <img src="{% static 'img/doc.jpg' %}" alt="" />
+      </div>
+      <div class="mid">
+        <p class="name">soliman elmasr</p>
+        <p class="jop">develeper</p>
+      </div>
+      <div class="bottom">
+        <a href="">book now</a>
+      </div>
+    </div>
+  </section>
+
+
+  
+
+{% endblock content %}

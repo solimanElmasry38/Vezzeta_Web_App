@@ -1,0 +1,55 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="grad"></div>
+
+    <section id="signUp">
+        <p class="heading">create add</p>
+        <form method="POST" class='signUpForm'>
+          {% csrf_token %}
+
+          <div>
+            {{form.address.label}}
+            {{form.address}}
+          
+
+          </div>
+          
+          <div>
+            {{form.weatingHours.label}}
+            {{form.weatingHours}}
+          
+          </div>
+
+          <div>
+          {{form.price.label}}
+          {{form.price}}
+            
+          </div>
+
+          <div>
+            {{form.workingHours.label}}
+            {{form.workingHours}}
+
+          </div>
+          <div>
+            {{form.errors}}
+          </div>
+          
+
+
+
+          
+          
+          
+          
+          
+          <input type="submit" value="sign up" class="submit">
+        </form>
+      </section>
+
+{% endblock content %}
+
+
