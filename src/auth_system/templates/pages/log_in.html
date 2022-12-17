@@ -5,12 +5,12 @@
 {% block content %}
 <div class="grad"></div>
 
-<section id="signUp">
+<section id="formSec">
 
   <h1>Log in </h1>
 
 
-  <form method="POST" class='signUpForm'>
+  <form method="POST" class='mainForm'>
 
       {% csrf_token %}
       <div>
@@ -23,7 +23,7 @@
       </div>
   
       
-      <input type="submit" value="log in" class="submit">
+      <input type="submit" value="log in" class="btn">
     </form>
 
 

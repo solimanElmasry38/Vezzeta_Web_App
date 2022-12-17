@@ -5,9 +5,9 @@
 {% block content %}
 <div class="grad"></div>
 
-    <section id="signUp">
+    <section id="formSec">
         <p class="heading">create add</p>
-        <form method="POST" class='signUpForm'>
+        <form method="POST" class='mainForm'>
           {% csrf_token %}
 
           <div>
@@ -46,7 +46,7 @@
           
           
           
-          <input type="submit" value="sign up" class="submit">
+          <input type="submit" value="sign up" class="btn">
         </form>
       </section>
 

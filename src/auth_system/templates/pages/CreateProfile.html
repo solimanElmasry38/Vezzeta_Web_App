@@ -4,26 +4,28 @@
 {% block content %}
 <div class="grad"></div>
 
-<section id="signUp">
+<section id="formSec">
     <h1> create your profile </h1>
 
 
-    <form method="POST" class='signUpForm' enctype="multipart/form-data">
+    <form method="POST" class='mainForm' enctype="multipart/form-data">
 
         {% csrf_token %}
     
     
-    <h1>select image for your profile</h1>
     <div>
         {{epif.phone.label}}
         {{epif.phone}}
     
     </div>
-    <h1>set your Phone number</h1>
     
-    <div>
-        {{epif.img.label}}
-        {{epif.img}}
+    <div class="xxx">
+        <label for="img" class="inputFileLabel">
+            select your image
+            <i class="fa-solid fa-camera"></i>
+            {{epif.img}}
+        </label>
+        
     
     </div>
     
@@ -38,7 +40,7 @@
     
     </div>
     
-    <input type="submit" value="done" class="submit">
+    <input type="submit" value="done" class="btn">
     
     </form>
     
