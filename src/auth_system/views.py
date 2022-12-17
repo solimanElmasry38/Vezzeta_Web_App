@@ -127,28 +127,33 @@ def EditeUserInfo(request):
 def CreateProfile(request):
     Searchfield = SearchFilter()
     cond = request.user.is_authenticated
-    currentprof = Profile.objects.get(user=request.user)
-    check =currentprof.are_you_doctor
-    currentProfile = Profile.objects.get(user=request.user)
+
+
+    currentprof = Add.objects.filter(user=request.user).first()
+    # check =currentprof.are_you_doctor
     # euif = EditeUserInfoForm
     ProfileInfo = EditeProfileInfoForm()
 
     if request.method == 'POST':
         ProfileInfo = EditeProfileInfoForm(
-            request.POST, request.FILES, instance=currentProfile)
+            request.POST, request.FILES, instance=currentprof)
         if ProfileInfo.is_valid():
 
             myPorfi = ProfileInfo.save(commit=False)
             myPorfi.user = request.user
             myPorfi.save()
+            return redirect('/adds/')
+            # check =currentprof.are_you_doctor
+            # if  check :
 
-
-            if not check :
-                return redirect('/adds/')
-
-            else:
-                return redirect('/ag/')
+            # else:
+            #     return redirect('/ag/')
                 
+
+            # return redirect('/adds/')
+
+
+            
     cond = request.user.is_authenticated
 
     context = {'Searchfield': Searchfield, "cond": cond, 'epif': ProfileInfo, 'cond':cond ,}

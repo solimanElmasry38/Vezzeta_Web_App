@@ -26,7 +26,7 @@ class Search(models.Model):
 
 class Profile(models.Model):
     user = models.OneToOneField(User,on_delete=models.CASCADE)
-    img= models.ImageField(upload_to='uplaoad',blank=True)
+    # img= models.ImageField(upload_to='uplaoad',blank=True)
     phone = models.IntegerField(blank=True, null=True,default=1)
     are_you_doctor =models.BooleanField(blank=True, null=True)
     def __str__(self):
@@ -41,7 +41,7 @@ class Add(models.Model):
     workingHours=models.DecimalField(max_digits=5,decimal_places=2,blank=True,null=True)
     img= models.ImageField(upload_to='uplaoad',blank=True)
     phone = models.IntegerField(blank=True, null=True,default=1)
-    are_you_doctor =models.BooleanField(blank=True, null=True)
+    are_you_doctor =models.BooleanField(blank=True, null=True )
     def __str__(self):
         return str(self.user)
 

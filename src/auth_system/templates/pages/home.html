@@ -11,12 +11,14 @@
     
     {% for card in cards %}
     <div class="card">
+      <span class="senp"></span>
       <div class="top">
         <a class="name">{{card.user.first_name}} {{card.user.last_name}}</a>
       </div>
       <div class="bottom">
         <span class="left">
-          <img src="{{card.img}}" alt="" class="DocImg" />
+        <img src="{{card.img.url}}" alt="" class="DocImg" />
+
         </span>
         <span class="mid">
           <ul data-highlight="false">
