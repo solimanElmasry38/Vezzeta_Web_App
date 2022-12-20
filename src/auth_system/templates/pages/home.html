@@ -12,16 +12,16 @@
     
     {% for card in cards %}
     <div class="card">
-      <span class="senp"></span>
+      <b class="senp"></b>
       <div class="top">
         <a href='' class="name">{{card.user.first_name}} {{card.user.last_name}}</a>
       </div>
       <div class="bottom">
-        <span class="left">
+        <div class="left">
         <img src="{{card.img.url}}" alt="" class="DocImg" />
 
-        </span>
-        <span class="mid">
+        </div>
+        <div class="mid">
           <ul data-highlight="false">
             <li>
               <i class="fa-solid fa-location-dot"></i>
@@ -52,10 +52,11 @@
               
             </li>
           </ul>
-        </span>
-        <span class="right">
+        </div>
+        <div class="right">
           <a href="" class="btn">book now</a>
-        </span>
+          <a href="" class="btn">chat</a>
+        </div>
       </div>
     </div>
       

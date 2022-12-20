@@ -5,7 +5,12 @@
     </div>
 
       <form method='GET'>
-        {{Searchfield.form}}
+        <div class="box">
+          {{Searchfield.form.DocName}}
+          {{Searchfield.form.city}}
+          {{Searchfield.form.specialization}}
+
+        </div>
         <input type="submit" value="search" class="btn">
       </form>
   </section>
