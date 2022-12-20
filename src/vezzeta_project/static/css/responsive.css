@@ -7,8 +7,15 @@
     color: black;
     list-style: none;
   }
-  #testmon{
-    display:none;
+  i {
+    background-image: linear-gradient(45deg, #2ca1d8, #0353af);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
+  #testmon {
+    display: none;
   }
   body {
     background: #abbedf;
@@ -116,17 +123,13 @@
     height: 150px;
   }
 
+  /* end header  ------------------- */
 
-
-
-
-/* end header  ------------------- */
-
-
-
-
-
-
+  .margin {
+    width: 100%;
+    height: 1000px;
+    color: cadetblue;
+  }
 
   #landing {
     width: 100%;
@@ -134,7 +137,6 @@
     background: #486db1;
     margin-top: 65px;
     overflow: hidden;
-
   }
   #landing .content {
     width: 100%;
@@ -174,10 +176,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap:5px;
+    gap: 5px;
   }
-  #landing form .box input{
-    width:120px;
+  #landing form .box input {
+    width: 120px;
   }
   #landing select {
     width: 120px;
@@ -227,8 +229,8 @@
     flex-direction: column; */
   }
   .card .bottom {
-    width:100%;
-    height:100%;
+    width: 100%;
+    height: 100%;
   }
   .card b {
     width: 40px;
@@ -240,8 +242,8 @@
     transform: translatex(-50%);
     border-radius: 50%;
   }
-  .card .top{
-    display:none;
+  .card .top {
+    display: none;
   }
   .card .left {
     width: 100%;
@@ -306,12 +308,12 @@
     background-color: #002880;
     padding: 5px;
     /* padding-bottom: 10px; */
-  }
-  footer .x {
     display: flex;
     /* align-items: center; */
     justify-content: space-between;
     flex-direction: column;
+  }
+  footer .x {
   }
   footer .logo {
     width: 200px;
@@ -340,11 +342,14 @@
   .socialMedia {
     width: 50px;
     height: 160px;
-    background-color: yellowgreen;
+    /* background-color: yellowgreen; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
+  }
+  .socialMedia i {
+    font-size: 25px;
   }
   .core {
     display: flex;
