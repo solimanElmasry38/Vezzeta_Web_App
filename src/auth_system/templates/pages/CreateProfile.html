@@ -1,55 +1,32 @@
-{% extends 'base.html' %}
-{% load static %}
-
-{% block content %}
+{% extends 'base.html' %} {% load static %} {% block content %}
 <div class="grad"></div>
 
 <section id="formSec">
-    <h1> create your profile </h1>
+  <h1>create your profile</h1>
 
+  <form method="POST" class="mainForm column" enctype="multipart/form-data">
+    {% csrf_token %}
 
-    <form method="POST" class='mainForm' enctype="multipart/form-data">
-
-        {% csrf_token %}
-    
-    
     <div>
-        {{epif.phone.label}}
-        {{epif.phone}}
-    
-    </div>
-    
-    <div class="xxx">
-        <label for="img" class="inputFileLabel">
-            select your image
-            <i class="fa-solid fa-camera"></i>
-            {{epif.img}}
-        </label>
-        
-    
-    </div>
-    
-    <div>
-        {{epif.are_you_doctor.label}}
-        {{epif.are_you_doctor}}
-    
-    </div>
-    <div>
-        {{epif.errors}}
-        
-    
-    </div>
-    
-    <input type="submit" value="done" class="btn">
-    
-    </form>
-    
-    
+      {{epif.phone}}
 
+    </div>
+
+    <div class="imgInputFeild">
+      <span>photo</span>
+      <i class="fa-solid fa-camera"></i>
+
+      {{epif.img}}
+    </div>
+
+    <div> 
+      {{epif.are_you_doctor}}
+
+    </div>
+    <div class="errors">{{epif.errors}}</div>
+
+    <input type="submit" value="done" class="btn" />
+  </form>
 </section>
-
-
-
-
 
 {% endblock content %}

@@ -6,35 +6,31 @@
 <div class="grad"></div>
 
     <section id="formSec">
-        <p class="heading">create add</p>
+        <h1 class="heading">create add</h1>
         <form method="POST" class='mainForm'>
           {% csrf_token %}
 
           <div>
-            {{form.address.label}}
             {{form.address}}
           
 
           </div>
           
           <div>
-            {{form.weatingHours.label}}
             {{form.weatingHours}}
           
           </div>
 
           <div>
-          {{form.price.label}}
           {{form.price}}
             
           </div>
 
           <div>
-            {{form.workingHours.label}}
             {{form.workingHours}}
 
           </div>
-          <div>
+          <div class="errors">
             {{form.errors}}
           </div>
           
@@ -46,7 +42,7 @@
           
           
           
-          <input type="submit" value="sign up" class="btn">
+          <input type="submit" value="save" class="btn">
         </form>
       </section>
 

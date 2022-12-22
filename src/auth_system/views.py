@@ -14,11 +14,13 @@ def home(request):
 
     Searchfield = SearchFilter()
     cond = request.user.is_authenticated
-    currentprof = Profile.objects.get(user=request.user)
+    currentprof = Add.objects.get(user=request.user)
     check =currentprof.are_you_doctor
     cards = Add.objects.all()
+    # img = Add.objects.get(img=)
+    img = currentprof.img
 
-    context = {'Searchfield': Searchfield, "cond": cond,'check':check ,'cards':cards,}
+    context = {'Searchfield': Searchfield, "cond": cond,'check':check ,'cards':cards,"userimg":img,}
     return render(request, 'pages/home.html', context)
 
 def signUp(request):
@@ -101,7 +103,7 @@ def EditeUserInfo(request):
     Searchfield = SearchFilter()
     cond = request.user.is_authenticated
 
-    currentProfile = Profile.objects.get(user=request.user)
+    currentProfile = Add.objects.get(user=request.user)
     euif = EditeUserInfoForm
     epif = EditeProfileInfoForm
 
@@ -121,7 +123,10 @@ def EditeUserInfo(request):
 
     y = EditeProfileInfoForm(instance=currentProfile)
 
-    context = {'Searchfield': Searchfield, "cond": cond,'euif': x, 'epif': y, }
+
+    img = currentProfile.img
+
+    context = {'Searchfield': Searchfield, "cond": cond,'euif': x, 'epif': y, "userimg":img,}
     return render(request, 'pages/EditeUserInfo.html', context)
 
 def CreateProfile(request):
@@ -161,17 +166,18 @@ def CreateProfile(request):
 
 def profile(request):
 
-    myprofile = Profile.objects.get(user= request.user )
+    myprofile = Add.objects.get(user= request.user )
     user = request.user
 
     
 
 
+    img = myprofile.img
 
 
     Searchfield = SearchFilter()
     cond = request.user.is_authenticated
 
-    context = {'Searchfield': Searchfield, "cond": cond,'myprofile':myprofile,'user':user,}
+    context = {'Searchfield': Searchfield, "cond": cond,'myprofile':myprofile,'user':user,"userimg":img,}
 
     return render(request, 'pages/profile.html', context)

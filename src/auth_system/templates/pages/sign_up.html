@@ -3,50 +3,51 @@
 {% block content %}
 <div class="grad"></div>
     <section id="formSec">
-        <p class="heading">sign up</p>
+        <h1 class="heading">sign up</h1>
         <form method="POST" class='mainForm'>
           {% csrf_token %}
           <div>
-            {{signform.first_name.label}}
+            <!-- {{signform.first_name.label}} -->
             {{signform.first_name}}
           </div>
           <div>
-            {{signform.last_name.label}}
+            <!-- {{signform.last_name.label}} -->
             {{signform.last_name}}
           </div>
           <div>
-            {{signform.username.label}}
+            <!-- {{signform.username.label}} -->
             {{signform.username}}
           </div>
           <div>
-            {{signform.email.label}}
+            <!-- {{signform.email.label}} -->
             {{signform.email}}
           </div>
           <div>
-            {{signform.password1.label}}
+            <!-- {{signform.password1.label}} -->
             {{signform.password1}}
           </div>
           <div>
-            {{signform.password2.label}}
+            <!-- {{signform.password2.label}} -->
             {{signform.password2}}
           </div>
           <input type="submit" value="sign up" class="btn">
         </form>
         <div class='error'>
-        {{signform.errors}}  
-        {{signform.password.errors}}
-        </div>
-        <p class="logInWith">sign up with</p>
-        <div class="social">
-          <a href="">
-            <img src="{% static 'img/dental-care.png' %}" alt="" />
-          </a>
-          <p class="or">or</p>
-          <a href="">
-            <img src="{% static 'img/dental-care.png' %}" alt="" />
-          </a>
-        </div>
-        <p class="sign">already have accounte <a href="{% url 'logIn' %}">log in</a></p>
+          {{signform.errors}}  
+          {{signform.password.errors}}
+          </div>
+          <p class="logInWith">sign up with</p>
+          <div class="social">
+            <a href="">
+              <i class="fa-brands fa-google"></i>
+            </a>
+            <p class="or">or</p>
+            <a href="">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+          <p class="sign">already have accounte <a href="{% url 'logIn' %}">log in</a></p>
+          
       </section>
 {% endblock content %}
 
